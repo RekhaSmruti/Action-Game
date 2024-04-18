@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameContainer{
+    background-image: url(nature.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dog{
+    background-image: url(dog.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 133px;
+    height: 108px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle{
+    width: 250px;
+    height: 150px;
+    background-image: url(tiger.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 60vw;
+}
+
+.animateDog{
+    animation: dog 0.7s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 4s linear infinite;
+}
+
+.gameOver{
+    
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    color: aliceblue;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#scoreCont{
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 112px;
+    font: 1em cursive;
+    color: aliceblue;
+    font-weight: bold;
+    font-family: 25px;
+    border-radius: 8px;
+}
+
+@keyframes dog{
+    0%{     
+        bottom: 0;
+    }
+    50%{
+        bottom: 322px;
+    }
+    100%{
+         bottom: 0;
+    }
+}
+
+@keyframes obstacleAni {
+    0%{
+        left:100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
